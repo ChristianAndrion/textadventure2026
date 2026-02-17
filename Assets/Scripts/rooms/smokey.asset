@@ -9,13 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb4ac6f7084b3eb418bf60f9fa429b81, type: 3}
+  m_Script: {fileID: 11500000, guid: 0192ee00426cb7e40aa905ee2f733fe3, type: 3}
   m_Name: smokey
   m_EditorClassIdentifier: 
-  roomName: smokey
-  description: 'This room is awfully smokey... I hope there is not something dangerous
-    near by. '
+  roomName: Smokey
+  description: It is oddly smokey in here, someone must be having a BBQ nearby
   exits:
   - {fileID: 11400000, guid: a9111387728769142a3559e90fba9cd9, type: 2}
-  - {fileID: 11400000, guid: 26ff25beaa36096418bc84413a186c48, type: 2}
   - {fileID: 11400000, guid: 7c8d0d7178a0583479d420f956b0269d, type: 2}
+  - {fileID: 11400000, guid: 26ff25beaa36096418bc84413a186c48, type: 2}

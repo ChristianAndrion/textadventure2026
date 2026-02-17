@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 897404b0b5a684945bbd0f8588f20d52, type: 3}
+  m_Script: {fileID: 11500000, guid: f65236924d612b5449e1df1e9d5f2bea, type: 3}
   m_Name: toExitWest
   m_EditorClassIdentifier: 
   direction: 3
-  description: The door to the west looks uneventful.
+  description: There is a plain door to the west
   room: {fileID: 11400000, guid: 4c28f310f04bf5c4b8d10d023212a12f, type: 2}

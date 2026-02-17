@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 897404b0b5a684945bbd0f8588f20d52, type: 3}
+  m_Script: {fileID: 11500000, guid: f65236924d612b5449e1df1e9d5f2bea, type: 3}
   m_Name: toWinEast
   m_EditorClassIdentifier: 
-  direction: 2
-  description: Is the door to the east my exit?
+  direction: 0
+  description: There is a door radiating with good vibes, I think I can hear a choir?
   room: {fileID: 11400000, guid: 9498a018f38d2e04cb05e3e44e9d7507, type: 2}
-  isLocked: 1
-  isHidden: 0

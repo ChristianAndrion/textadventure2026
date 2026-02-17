@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb4ac6f7084b3eb418bf60f9fa429b81, type: 3}
+  m_Script: {fileID: 11500000, guid: 0192ee00426cb7e40aa905ee2f733fe3, type: 3}
   m_Name: exit
   m_EditorClassIdentifier: 
-  roomName: exit
-  description: This feel hopeful. We might actually get out of here.
+  roomName: Exit
+  description: Hmmmm... I smell an exit nearby
   exits:
-  - {fileID: 11400000, guid: c480c7ea8342af243862f67602616a48, type: 2}
   - {fileID: 11400000, guid: da144f9b1f3d26d418b45cc457c4168e, type: 2}
+  - {fileID: 11400000, guid: c480c7ea8342af243862f67602616a48, type: 2}

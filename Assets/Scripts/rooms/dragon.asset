@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb4ac6f7084b3eb418bf60f9fa429b81, type: 3}
+  m_Script: {fileID: 11500000, guid: 0192ee00426cb7e40aa905ee2f733fe3, type: 3}
   m_Name: dragon
   m_EditorClassIdentifier: 
-  roomName: dragon
-  description: 'You died. There is dragon in here. Maybe you should have picked the
-    other door. '
+  roomName: Dragon
+  description: Oh no! There is a dragon. \nYou Died
   exits: []

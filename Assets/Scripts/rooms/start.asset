@@ -9,13 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb4ac6f7084b3eb418bf60f9fa429b81, type: 3}
+  m_Script: {fileID: 11500000, guid: 0192ee00426cb7e40aa905ee2f733fe3, type: 3}
   m_Name: start
   m_EditorClassIdentifier: 
-  roomName: start
-  description: 'You wake up to find yourself in a very dark room.  '
+  roomName: Start
+  description: WHERE AM I?! WHO ARE YOU?!
   exits:
   - {fileID: 11400000, guid: ab23b2cf609cf8945b4da6f0b4830fa4, type: 2}
   - {fileID: 11400000, guid: 6a9c201b440ca8645b0ccda7afcc31bc, type: 2}
-  hasKey: 0
-  hasOrb: 0

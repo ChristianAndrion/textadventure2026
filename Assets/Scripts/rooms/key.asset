@@ -9,12 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb4ac6f7084b3eb418bf60f9fa429b81, type: 3}
+  m_Script: {fileID: 11500000, guid: 0192ee00426cb7e40aa905ee2f733fe3, type: 3}
   m_Name: key
   m_EditorClassIdentifier: 
-  roomName: key
-  description: There is some stuff in here. Is key a key over there?
+  roomName: Key
+  description: Yooo is that a key?!
   exits:
   - {fileID: 11400000, guid: 38c75638c005c5140a7edd7fac396d5e, type: 2}
-  hasKey: 1
-  hasOrb: 0

@@ -52,7 +52,16 @@ public class InputManager : MonoBehaviour
             {
                 if (commands.Contains(parts[0])) //Valid Command 
                 {
+
                     UpdateStory(input);
+                    if (parts[0] == "go")
+                    {
+                        if (NavagationManager.instance.SwitchRooms(parts[1]))
+                            return;
+                        else
+                            UpdateStory("Thats a wall");
+                    }
+                    
                 }
                 else //Invalid Command
                 {

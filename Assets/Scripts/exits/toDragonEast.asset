@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 897404b0b5a684945bbd0f8588f20d52, type: 3}
+  m_Script: {fileID: 11500000, guid: f65236924d612b5449e1df1e9d5f2bea, type: 3}
   m_Name: toDragonEast
   m_EditorClassIdentifier: 
   direction: 2
-  description: Ummmm... the door to the east looks scary.
+  description: There appears to be a low rumbling sound from the door to the east,
+    sounds like someones got the stove on
   room: {fileID: 11400000, guid: 4db543c76798f584fb2d27fc3abaa7e7, type: 2}
