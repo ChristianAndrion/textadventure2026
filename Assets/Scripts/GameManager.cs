@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    public List<string> inventory = new List<string>();
     private void Awake()
     {
         if (instance == null)

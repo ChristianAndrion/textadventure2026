@@ -59,7 +59,14 @@ public class InputManager : MonoBehaviour
                         if (NavagationManager.instance.SwitchRooms(parts[1]))
                             return;
                         else
-                            UpdateStory("Thats a wall");
+                            UpdateStory("The exit does not exist or is locked...");
+                    }else if (parts[0] == "get")
+                    {
+                        if (NavagationManager.instance.getItem(parts[1]))
+                            {
+                            GameManager.instance.inventory.Add(parts[1]);
+                            }
+
                     }
                     
                 }

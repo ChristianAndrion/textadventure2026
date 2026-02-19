@@ -7,4 +7,10 @@ public class Room : ScriptableObject
     [TextArea]
     public string description;
     public Exit[] exits;
+
+    //Another way we can add pickup items
+    //public bool hasKey;
+    //public bool hasOrb;
+
+    public string[] items;
 } 

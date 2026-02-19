@@ -12,4 +12,7 @@ public class Exit : ScriptableObject
     public string description;
 
     public Room room; //Room that the exit is attatched to
+
+    public bool is_locked;
+    public bool is_hidden;
 }
