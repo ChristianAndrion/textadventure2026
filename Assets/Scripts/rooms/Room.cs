@@ -1,3 +1,5 @@
+using NUnit.Framework;
+using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Room", menuName = "Text/Room")]
@@ -12,5 +14,5 @@ public class Room : ScriptableObject
     //public bool hasKey;
     //public bool hasOrb;
 
-    public string[] items;
+    public List <string> items;
 } 

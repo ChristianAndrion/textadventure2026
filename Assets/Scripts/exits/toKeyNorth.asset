@@ -15,3 +15,5 @@ MonoBehaviour:
   direction: 0
   description: There is a plain door to the north
   room: {fileID: 11400000, guid: 2583d7558e0c8b84aa3dcbf59d75c598, type: 2}
+  is_locked: 0
+  is_hidden: 1

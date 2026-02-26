@@ -17,3 +17,5 @@ MonoBehaviour:
   exits:
   - {fileID: 11400000, guid: ac9ff88776384374389a37d69fb942db, type: 2}
   - {fileID: 11400000, guid: d1fa62c9de2baa3458bb68555faa781c, type: 2}
+  items:
+  - Orb

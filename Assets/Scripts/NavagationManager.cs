@@ -8,6 +8,9 @@ public class NavagationManager : MonoBehaviour
     public Room startingRoom;
     public Room currentRoom;
     public Exit toKeyNorth;
+    public List<Room> rooms; //Will allow nav manager to have access to all rooms
+
+
     public delegate void Restart(); //Custom event
     public event Restart onRestart;
 
@@ -29,7 +32,7 @@ public class NavagationManager : MonoBehaviour
     private void Start()
     {
         currentRoom = startingRoom;
-        Unpack();
+        //Unpack();
     }
 
     void Unpack()
@@ -49,9 +52,10 @@ public class NavagationManager : MonoBehaviour
         InputManager.instance.UpdateStory(description);
         if(currentRoom.name == "dragons")
         {
-            onRestart.Invoke(); //Calling my restart event to happen
-            currentRoom = startingRoom; //Puts player back to starting point
-            Unpack();
+            //onRestart.Invoke(); //Calling my restart event to happen
+            //currentRoom = startingRoom; //Puts player back to starting point
+            //Unpack();
+            GameRestart();
         }
     }
 
@@ -74,6 +78,23 @@ public class NavagationManager : MonoBehaviour
         return false;
     }
 
+    public void LoadRooms(Room room)
+    {
+        currentRoom = room;
+        Unpack();
+    }
+
+    public void GameRestart()
+    {
+        onRestart.Invoke(); //Calling my restart event to happen
+        //^ Point to a function
+        currentRoom = startingRoom; //Puts player back to starting point
+        toKeyNorth.is_hidden = true;
+
+        Unpack();
+
+    }
+
     public Exit getExit(string direction)
     {
         foreach (Exit e in currentRoom.exits)
@@ -87,19 +108,37 @@ public class NavagationManager : MonoBehaviour
     public bool getItem(string item)
     {
         bool isFound = false;
-        foreach(string i in currentRoom.items)
-    {
+        foreach (string i in currentRoom.items)
+        {
             if (i == item)
             {
                 isFound = true;
-                if(item == "orb")
+                if (item == "orb")
                 {
                     toKeyNorth.is_hidden = false;
                 }
             }
-                return true;
-    }
+
+        }
+            if (isFound)
+            {
+                currentRoom.items.Remove(item);
+                currentRoom.description = "There is a subtle glow that remains where the blue orb used to be";
+            }
+
         return isFound;//item not found in room
+    }
+
+    public Room GetRoomByName(string name)
+    {
+        foreach(Room aroom in rooms)
+        {
+            if (aroom.name == name)
+            {
+                return aroom;
+            }
+        }
+        return null;
     }
 
 }
