@@ -82,10 +82,19 @@ public class InputManager : MonoBehaviour
                         if (NavagationManager.instance.getItem(parts[1]))
                         {
                             GameManager.instance.inventory.Add(parts[1]);
+                            UpdateStory("You picked up the " + parts[1]);
                         }
-
+                        else
+                        {
+                            UpdateStory("Item does not exist");
+                        }
                     }
-                } //End
+                    
+                }
+                else
+                {
+                    UpdateStory("Invalid command. Please try again.");
+                }
             }
             else if (parts.Length == 1)
             {
@@ -98,6 +107,11 @@ public class InputManager : MonoBehaviour
                 {
                     GameManager.instance.Save();
                     UpdateStory("Game saved!");
+                }
+
+                else
+                {
+                    UpdateStory("Invalid command. Please try again.");
                 }
             }
 
