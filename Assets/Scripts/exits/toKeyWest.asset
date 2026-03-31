@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f65236924d612b5449e1df1e9d5f2bea, type: 3}
   m_Name: toKeyWest
   m_EditorClassIdentifier: 
-  direction: 0
-  description: There is a plain door west
-  room: {fileID: 0}
+  direction: 3
+  description: There is a plain door to the west
+  room: {fileID: 11400000, guid: 2583d7558e0c8b84aa3dcbf59d75c598, type: 2}
   is_locked: 0
   is_hidden: 0

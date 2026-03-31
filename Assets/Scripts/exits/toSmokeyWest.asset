@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f65236924d612b5449e1df1e9d5f2bea, type: 3}
-  m_Name: toKeyNorth
+  m_Name: toSmokeyWest
   m_EditorClassIdentifier: 
-  direction: 0
-  description: The ORB reveals a previously hidden door north
-  room: {fileID: 11400000, guid: 2583d7558e0c8b84aa3dcbf59d75c598, type: 2}
+  direction: 3
+  description: There is a door to the west
+  room: {fileID: 11400000, guid: 64b367cc3fded8540b7c8b208b7cb419, type: 2}
   is_locked: 0
-  is_hidden: 0
+  is_hidden: 1

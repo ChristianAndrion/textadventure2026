@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: win
   m_EditorClassIdentifier: 
   roomName: Win
-  description: Yipppeee!! \nYou Win!
+  description: You feel a soft breeze blow against your face, the blue sky seems
+    to stretch on endlessly \nYou Win!
   exits: []
+  items: []

@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: toExitEast
   m_EditorClassIdentifier: 
   direction: 2
-  description: There is a plain door to the east
+  description: There is an blue door to the east
   room: {fileID: 11400000, guid: 4c28f310f04bf5c4b8d10d023212a12f, type: 2}
+  is_locked: 1
+  is_hidden: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: toWinEast
   m_EditorClassIdentifier: 
   direction: 2
-  description: There is a door radiating with good vibes, I think I can hear a choir?
+  description: Natural light peers from underneath a golden door to the east
   room: {fileID: 11400000, guid: 9498a018f38d2e04cb05e3e44e9d7507, type: 2}
-  is_locked: 0
+  is_locked: 1
   is_hidden: 0

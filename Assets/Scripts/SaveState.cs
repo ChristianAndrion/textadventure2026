@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
@@ -5,5 +6,6 @@ using UnityEngine;
 public class SaveState
 {
     public string currentRoom;
-
+    public List<string> inventory;
+    public List<string> pickedUpItems;
 }

@@ -9,6 +9,7 @@ public class ToggleController : MonoBehaviour
     public TMP_Text inputText; // part of the input field where user enters response
     public TMP_Text placeHolderText; // part of the input field for initial placeholder text
     public Text toggleText;
+    public Text fontSizeText;
 
     private bool darkmode;
     private Toggle toggle;
@@ -42,6 +43,7 @@ public class ToggleController : MonoBehaviour
             inputText.color = Color.white;
             placeHolderText.color = Color.white;
             toggleText.color = Color.white;
+            fontSizeText.color = Color.white;
         }
         else
         {
@@ -51,6 +53,7 @@ public class ToggleController : MonoBehaviour
             inputText.color = Color.black;
             placeHolderText.color = Color.black;
             toggleText.color = Color.black;
+            fontSizeText.color = Color.black;   
         }
     }
 

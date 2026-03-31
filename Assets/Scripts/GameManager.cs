@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     public List<string> inventory = new List<string>();
+    public List<string> pickedUpItems = new List<string>();
+
     private void Awake()
     {
         if (instance == null)
@@ -31,6 +33,8 @@ public class GameManager : MonoBehaviour
     {
         SaveState gameState = new SaveState();
         gameState.currentRoom = NavagationManager.instance.currentRoom.name;
+        gameState.inventory = inventory;
+        gameState.pickedUpItems = pickedUpItems;
 
         BinaryFormatter bf = new BinaryFormatter();
         FileStream aFile = File.Create(Application.persistentDataPath + "/player.save");
@@ -54,6 +58,15 @@ public class GameManager : MonoBehaviour
             {
                 NavagationManager.instance.LoadRooms(room);
             }
+            if (gameState.inventory != null)
+            {
+                inventory = gameState.inventory;
+            }
+            if (gameState.pickedUpItems != null)
+            {
+                pickedUpItems = gameState.pickedUpItems;
+                NavagationManager.instance.UpdateRooms(pickedUpItems);
+            }
         }
         else //new player
             NavagationManager.instance.GameRestart();
@@ -62,6 +75,11 @@ public class GameManager : MonoBehaviour
     void ResetGame()
     {
         inventory.Clear();
+        pickedUpItems.Clear();
+        if (File.Exists(Application.persistentDataPath + "/player.save"))
+        {
+            File.Delete(Application.persistentDataPath + "/player.save");
+        }
     }
 
 

@@ -13,6 +13,12 @@ MonoBehaviour:
   m_Name: key
   m_EditorClassIdentifier: 
   roomName: Key
-  description: Yooo is that a key?!
+  description: A BLUE KEY is positioned on a pedestal in the middle of the room,
+    illuminated by a crack in the ceiling
   exits:
   - {fileID: 11400000, guid: 38c75638c005c5140a7edd7fac396d5e, type: 2}
+  - {fileID: 11400000, guid: baac5149b70a6b94c972d12f75d9ab0c, type: 2}
+  items:
+  - BLUE
+  originalItems:
+  - BLUE

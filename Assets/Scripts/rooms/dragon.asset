@@ -13,5 +13,11 @@ MonoBehaviour:
   m_Name: dragon
   m_EditorClassIdentifier: 
   roomName: Dragon
-  description: Oh no! There is a dragon. \nYou Died
-  exits: []
+  description: The dragon, sensing that you are here, awakens.
+  exits:
+  - {fileID: 11400000, guid: 008d65524e0f91a498352ce6af00a6bf, type: 2}
+  - {fileID: 11400000, guid: 1bf42d9b7748495458419b4e8c33a44b, type: 2}
+  items:
+  - GOLDEN
+  originalItems:
+  - GOLDEN

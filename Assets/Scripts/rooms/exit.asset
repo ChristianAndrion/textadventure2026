@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: exit
   m_EditorClassIdentifier: 
   roomName: Exit
-  description: Hmmmm... I smell an exit nearby
+  description: The sound of birds chirping can be heard nearby
   exits:
   - {fileID: 11400000, guid: da144f9b1f3d26d418b45cc457c4168e, type: 2}
   - {fileID: 11400000, guid: c480c7ea8342af243862f67602616a48, type: 2}
+  items: []

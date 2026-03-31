@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f65236924d612b5449e1df1e9d5f2bea, type: 3}
-  m_Name: toKeyNorth
+  m_Name: toDragonWest
   m_EditorClassIdentifier: 
-  direction: 0
-  description: The ORB reveals a previously hidden door north
-  room: {fileID: 11400000, guid: 2583d7558e0c8b84aa3dcbf59d75c598, type: 2}
+  direction: 3
+  description: There appears to be a low rumbling sound from the door to the west,
+    sounds like someones got the stove on
+  room: {fileID: 11400000, guid: 4db543c76798f584fb2d27fc3abaa7e7, type: 2}
   is_locked: 0
   is_hidden: 0

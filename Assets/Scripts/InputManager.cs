@@ -32,10 +32,13 @@ public class InputManager : MonoBehaviour
 
     void Start()
     {
+        commands.Add("commands");
         commands.Add("go");
         commands.Add("get");
         commands.Add("restart");
         commands.Add("save");
+        commands.Add("inventory");
+        commands.Add("investigate");
 
         story = storyText.text;
         userInput.onEndEdit.AddListener(GetInput);
@@ -81,14 +84,36 @@ public class InputManager : MonoBehaviour
                     {
                         if (NavagationManager.instance.getItem(parts[1]))
                         {
-                            GameManager.instance.inventory.Add(parts[1]);
-                            UpdateStory("You picked up the " + parts[1]);
+                            string pickedUpItem;
+                            if (parts[1] == "golden")
+                                pickedUpItem = "GOLDEN KEY";
+                            else if (parts[1] == "blue")
+                                pickedUpItem = "BLUE KEY";
+                            else if (parts[1] == "red")
+                                pickedUpItem = "RED KEY";
+                            else
+                                pickedUpItem = parts[1].ToUpper();
+
+
+                            GameManager.instance.inventory.Add(pickedUpItem);
+                            
+                            UpdateStory("You picked up the " + pickedUpItem);
                         }
                         else
                         {
-                            UpdateStory("Item does not exist");
+                            string pickedUpItem;
+                            if (parts[1] == "golden")
+                                pickedUpItem = "GOLDEN KEY";
+                            else if (parts[1] == "blue")
+                                pickedUpItem = "BLUE KEY";
+                            else if (parts[1] == "red")
+                                pickedUpItem = "RED KEY";
+                            else
+                                pickedUpItem = parts[1].ToUpper();
+                            UpdateStory(pickedUpItem + " does not exist");
                         }
                     }
+                    
                     
                 }
                 else
@@ -107,6 +132,58 @@ public class InputManager : MonoBehaviour
                 {
                     GameManager.instance.Save();
                     UpdateStory("Game saved!");
+                }
+                else if (parts[0] == "commands")
+                {
+                    UpdateStory("Available Commands: ");
+                    foreach (string command in commands)
+                    {
+                        UpdateStory(command);
+                    }
+                }
+                else if (parts[0] == "inventory")
+                {
+                    if (GameManager.instance.inventory.Count > 0)
+                    {
+                        UpdateStory("Inventory: ");
+                        foreach (string items in GameManager.instance.inventory)
+                        {
+                            UpdateStory(items);
+                        }
+                    }
+                    else
+                    {
+                        UpdateStory("No items in inventory");
+                    }
+                }
+                else if (parts[0] == "investigate")
+                {
+
+                    if (NavagationManager.instance.currentRoom.roomName == "Poster")
+                    {
+                        if (GameManager.instance.pickedUpItems.Contains("RED"))
+                            UpdateStory("There is nothing under the poster");
+                        else
+                            UpdateStory("Beneath the clown poster there is a RED KEY");
+                    }
+                    else if (NavagationManager.instance.currentRoom.roomName == "Shield")
+                    {
+                        if (GameManager.instance.pickedUpItems.Contains("SHIELD"))
+                            UpdateStory("The old chest is empty...");
+                        else
+                            UpdateStory("Inside of the old chest there is a SHIELD");
+                    }
+                    else if (NavagationManager.instance.currentRoom.roomName == "Dragon")
+                    {
+                        if (GameManager.instance.pickedUpItems.Contains("GOLDEN"))
+                            UpdateStory("Too much gold to carry, youll have to come back with a wagon to carry it all");
+                        else
+                            UpdateStory("There is a GOLDEN KEY amongst the dragon's loot");
+                    }
+                    else
+                        UpdateStory("There is nothing here...");
+                    NavagationManager.instance.Unpack();
+                    
                 }
 
                 else
